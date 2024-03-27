@@ -15,26 +15,25 @@ const data = {
 const keys = Object.keys(data);
 for (let i = 0; i < keys.length; i++) {
   const key = keys[i];
-  console.log(key + ": " + data [key]);
-}
-
+  const value = data[key];
+  console.log(key + ": " + value);
+} 
 //For in 
 for (let key in data) {
-    console.log(key + ": " + data[key]);
-  }
+  const value = data[key];
+  console.log(key + ": " + value);
+}
 
   // for of
-  const entries = Object.entries(data);
-for (let entry of entries) {
-  console.log(entry[0] + ": " + entry[1]);
+  
+const entries = Object.entries(data);
+for (let [key, value] of entries) {
+  console.log(key + ": " + value);
 }
 
 //for each
 
-data.skills.forEach(function(skill) {
-    console.log(skill);
-  });
-
+data.skills.forEach(skill => console.log(skill));
   
     
     
